@@ -207,7 +207,7 @@ function CommissionLevels({ levels }: any) {
             </div>
           </div>
           <div className="text-right">
-            <div className="text-sm font-medium">€{data?.commission?.toLocaleString() || "0"}</div>
+            <div className="text-sm font-medium">${data?.commission?.toLocaleString() || "0"}</div>
             <div className="text-xs text-zinc-500">{data?.count || 0} purchases</div>
           </div>
         </div>
@@ -405,7 +405,7 @@ function IntroducerDashboard({ corporates, onAddCorporate, onOpenCorporate }: an
         <KPI title="Active Scentwork Partners" value={corporates.filter((c: any) => c.status === "Approved").length} icon={Users} />
         <KPI title="Pending Approval" value={corporates.filter((c: any) => c.status !== "Approved").length} icon={CircleAlert} />
         <KPI title="Total Levels 1-5 Purchases" value={142} icon={TrendingUp} />
-        <KPI title="Est. Total Commission" value={`€ ${Intl.NumberFormat().format(totalCommission)}`} icon={Award} />
+        <KPI title="Est. Total Commission" value={`$ ${Intl.NumberFormat().format(totalCommission)}`} icon={Award} />
       </div>
 
       {/* Levels 1-5 Commission Summary */}
@@ -435,7 +435,7 @@ function IntroducerDashboard({ corporates, onAddCorporate, onOpenCorporate }: an
                 <div key={level} className="p-4 border rounded-lg">
                   <div className="text-xs text-zinc-500 mb-1">Level {level}</div>
                   <div className="text-lg font-semibold">{percentage}</div>
-                  <div className="text-sm text-zinc-700 mt-2">€{totalForLevel.toLocaleString()}</div>
+                  <div className="text-sm text-zinc-700 mt-2">${totalForLevel.toLocaleString()}</div>
                 </div>
               );
             })}
@@ -501,7 +501,7 @@ function IntroducerDashboard({ corporates, onAddCorporate, onOpenCorporate }: an
                         </td>
                         <td className="py-2 pr-4">{c.region}</td>
                         <td className="py-2 pr-4"><StatusPill status={c.status} /></td>
-                        <td className="py-2 pr-4 font-medium">€{totalCommission.toLocaleString()}</td>
+                        <td className="py-2 pr-4 font-medium">${totalCommission.toLocaleString()}</td>
                         <td className="py-2 pr-4">{c.createdAt}</td>
                         <td className="py-2 pr-4 text-right">
                           <Button size="sm" variant="outline" onClick={() => onOpenCorporate(c)}>View</Button>
