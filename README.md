@@ -1,6 +1,8 @@
 # Scentwork Corporate Console
 
-A Next.js application for managing corporate introducers and corporate partners in the Scentwork ecosystem.
+A Next.js application for managing Scentwork Ambassadors and Scentwork Partners in the Scentwork MLM ecosystem.
+
+**🚀 Supabase Integration Ready!** See `README_SUPABASE.md` for 5-minute setup guide.
 
 ## Getting Started
 

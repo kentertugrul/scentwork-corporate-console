@@ -1,0 +1,14 @@
+# Environment Variables for Supabase Integration
+# Copy these to .env.local and fill in your Supabase credentials
+
+NEXT_PUBLIC_SUPABASE_URL=https://your-project-ref.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+
+# Get these values from:
+# Supabase Dashboard → Project Settings → API
+#
+# Project URL = NEXT_PUBLIC_SUPABASE_URL
+# Anon/Public key = NEXT_PUBLIC_SUPABASE_ANON_KEY  
+# Service role key = SUPABASE_SERVICE_ROLE_KEY (keep secret!)
+
